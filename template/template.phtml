@@ -1,0 +1,21 @@
+<?php
+require_once "CatInfo.php";
+require_once "People.php";
+$people = new People();
+$block = new CatInfo($people);
+$maleCatList = $block->getMaleCatNames();
+$femaleCatList = $block->getFemaleCatNames();
+?>
+<h4><?= 'Cat Name List'; ?></h4>
+<h5><?= 'Male' ?></h5>
+<ul>
+    <?php foreach ($maleCatList as $maleCatName): ?>
+        <li><?= $maleCatName ?></li>
+    <?php endforeach; ?>
+</ul>
+<h5><?= "Female" ?></h5>
+<ul>
+    <?php foreach ($femaleCatList as $femaleCatName): ?>
+        <li><?= $femaleCatName ?></li>
+    <?php endforeach; ?>
+</ul>

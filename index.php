@@ -1,2 +1,6 @@
-<?php echo "1Dant";?>
-<?php echo "AGL coding Test";?>
+<?php
+require_once "CatInfo.php";
+require_once "People.php";
+$people = new People();
+$block = new CatInfo($people);
+echo $block->init();
